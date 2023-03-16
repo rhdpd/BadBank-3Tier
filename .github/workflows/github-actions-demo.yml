@@ -3,13 +3,14 @@
 
 name: BadBank Docker
 
-
-  #push: 
-    #branches:
-     # - main
-  jobs:
-    build:
-      run-on: ubuntu-latest   
+on: 
+  push: 
+    branches:
+      - main
+jobs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v3
@@ -19,6 +20,7 @@ name: BadBank Docker
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build --if-present
+      - run: npm test
       
     build:
       runs-on: ubuntu-latest
