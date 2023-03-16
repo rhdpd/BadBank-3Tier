@@ -3,10 +3,13 @@
 
 name: BadBank Docker
 
-on: 
-  push: 
-    branches:
-      - main
+
+  #push: 
+    #branches:
+     # - main
+  jobs:
+    build:
+      run-on: ubuntu-latest   
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v3
