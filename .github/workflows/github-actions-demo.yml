@@ -7,10 +7,6 @@ on:
   push: 
     branches:
       - main
-jobs:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v3
