@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/node": "^12.6.8",
     "aws-cdk": "^1.2.0",
-    "typescript": "^3.5.3"
+    "typescript": "^5.0.2"
 },
   "dependencies": {
     "cors": "^2.8.5",
