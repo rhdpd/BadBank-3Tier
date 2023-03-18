@@ -31,11 +31,6 @@ jobs:
           context: .
           load: true
           tags: user/app:latest
-          
-          
-  build:
-    runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
