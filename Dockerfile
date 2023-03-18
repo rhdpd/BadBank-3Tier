@@ -11,5 +11,11 @@ RUN  npm install
 #Bundle app source
 COPY . .
 
+RUN npm run build
+
+COPY entrypoint.sh /entrypoint.sh
+RUN ["chmod", "+x", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+
 EXPOSE 3000
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
