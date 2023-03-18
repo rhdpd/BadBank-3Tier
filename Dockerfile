@@ -17,4 +17,4 @@ RUN ["chmod", "+x", "/entrypoint.sh"]
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "node", "index.js" ]
