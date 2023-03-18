@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "awsec3_docker_express": "bin/awsec3_express_docker.js"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "aws-cdk": "^1.2.0",
+    "typescript": "^3.5.3"
+},
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
@@ -18,6 +31,10 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-router": "^5.1.0",
-    "react-router-dom": "^5.1.0"
+    "react-router-dom": "^5.1.0",
+    "@aws-cdk/aws-ecs": "^1.2.0",
+    "@aws-cdk/aws-elasticloadbalancingv2": "^1.2.0",
+    "@aws-cdk/core": "^1.2.0",
+    "source-map-support": "^0.5.12"
   }
 }
