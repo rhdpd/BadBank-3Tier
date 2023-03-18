@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
-import { cdk } from '/@aws-cdk/core';
+import  cdk = require {@aws-cdk/core'};
 import { Awsec3ExpressDockerStack } from '../lib/awsec3_express_docker-stack';
 
 const app = new cdk.App();
