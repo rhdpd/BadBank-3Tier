@@ -1,2 +1,2 @@
 #!/bin/sh
-sh -c "cdk $*"
+sh  "cdk $*"
